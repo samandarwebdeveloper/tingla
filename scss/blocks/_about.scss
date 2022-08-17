@@ -1,0 +1,101 @@
+.about-section {
+    padding: 230px 100px 0 100px;
+    margin-bottom: 100px;
+    &__wrapper {
+        width: 100%;
+        position: relative;
+        &-content {
+            width: 100%;
+            background: #0F0F54;
+            border-radius: 20px;
+            padding: 126px 80px;
+            display: flex;
+            &__left {
+                width: 50%;
+            }
+            align-items: center;
+            &__title {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 50px;
+                line-height: 1.2;
+                letter-spacing: -0.01em;
+                color: #FFFFFF;
+                margin-bottom: 30px;
+
+            }
+
+            &__text {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 1.5;
+                color: #FFFFFF;
+
+            }
+            &__right {
+                position: relative;
+                width: 50%;
+                img {
+                    width: 495px;
+                    position: absolute;
+                    margin-top: -28rem;
+                    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+                    transition: filter 0.3s ease;
+                    will-change: filter;
+                    &:hover {
+                        filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.5));
+                    }
+                }
+            }
+
+        }
+
+        &::before {
+            content: url("../../img/romb-shape.png");
+            display: block;
+            position: absolute;
+            top: -260px;
+            left: 30%;
+            z-index: -1;
+        }
+    }
+}
+
+@include breakpoint-down (480px) {
+    .about-section {
+        padding: 230px 0 0 0;
+        &__wrapper {
+            &-content {
+                flex-direction: column-reverse;
+                padding: 24px;
+                &__left {
+                    width: 100%;
+                }
+                &__title {
+                    font-size: 26px;
+                    margin-bottom: 16px;
+                }
+
+                &__text {
+                    font-size: 16px;
+                    line-height: 1.5;
+                    margin-bottom: 10px;
+                }
+                &__right {
+                    width: 100%;
+                    img {
+                        position: relative;
+                        width: 100%;
+                        margin-top: -11rem;
+                    }
+                }
+            }
+
+            &::before {
+                top: -300px;
+                left: -50px;
+            }
+        }
+    }
+}

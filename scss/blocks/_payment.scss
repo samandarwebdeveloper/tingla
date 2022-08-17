@@ -1,0 +1,111 @@
+.payment-section {
+    padding: 230px 100px 0 100px;
+    padding-bottom: 150px;
+    &__wrapper {
+        width: 100%;
+        position: relative;
+        &-content {
+            width: 100%;
+            background: #F9E0C7;
+            border-radius: 20px;
+            padding: 100px 60px;
+            display: flex;
+            &__left {
+                width: 50%;
+            }
+            &__title {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 50px;
+                line-height: 1.5;
+                letter-spacing: -0.01em;
+                margin-bottom: 30px;
+
+            }
+
+            &__text {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 34px;
+
+            }
+            &__right {
+                position: relative;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                img {
+                    width: 412px;
+                    position: absolute;
+                    margin-top: -21rem;
+                    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+                    transition: filter 0.3s ease;
+                    will-change: filter;
+                    &:hover {
+                        filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.5));
+                    }
+                }
+            }
+
+        }
+
+        &::after {
+            content: url("../../img/star-shape.png");
+            display: block;
+            position: absolute;
+            top: 115%;
+            left: 85%;
+            z-index: -1;
+        }
+    }
+}
+
+@include breakpoint-down (480px) {
+    .payment-section {
+        margin-top: 50px;
+        padding: 230px 0;
+        &__wrapper {
+            width: 100%;
+            &-content {
+                padding: 24px;
+                display: flex;
+                flex-direction: column-reverse;
+                &__left {
+                    width: 100%;
+                }
+                &__title {
+                    font-size: 26px;
+                    margin-bottom: 15px;
+    
+                }
+    
+                &__text {
+                    font-size: 18px;
+                    line-height: 1.5;
+    
+                }
+                &__right {
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        display: block;
+                        width: 100%;
+                        position: relative;
+                        margin-top: -15rem;
+                    }
+                }
+    
+            }
+    
+            &::after {
+                top: 105%;
+                left: 0;
+            }
+        }
+    }
+    
+}

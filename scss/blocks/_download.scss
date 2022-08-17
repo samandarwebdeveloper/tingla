@@ -1,0 +1,91 @@
+.download-section {
+    padding: 230px 100px 0 100px;
+    padding-bottom: 150px;
+    &__wrapper {
+        width: 100%;
+        background: #e4e4e45d;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        padding: 0 60px;
+        position: relative;
+        &-image {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            img {
+                width: 394px;
+                filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+                transition: filter 0.3s ease;
+                will-change: filter;
+                &:hover {
+                    filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.5));
+                }
+            }
+        }
+        &-content {
+            padding-left: 50px;
+            &__title {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 1.2;
+                margin-bottom: 50px;
+            }
+            a {
+                text-decoration: none;
+                img {
+                    transition: filter 0.3s ease;
+                    will-change: filter;
+                    &:hover {
+                        filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
+                    }
+                }
+            }
+            
+        }
+
+        &::before {
+            content: url("../../img/romb-shape.png");
+            display: block;
+            position: absolute;
+            top: 90%;
+            left: -120px;
+            z-index: -1;
+        }
+    }
+}
+
+@include breakpoint-down (480px) {
+    .download-section {
+        padding: 80px 0;
+        &__wrapper {
+            background: transparent;
+            padding: 0;
+            flex-direction: column;
+            &-image {
+                background: #e4e4e45d;
+                width: 100%;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                img {
+                    margin-top: -10rem;
+                    width: 100%;
+                }
+            }
+            &-content {
+                padding-left: 0;
+                padding-top: 32px;
+                &__title {
+                    font-size: 26px;
+                    margin-bottom: 32px;
+                }
+                
+            }
+    
+            &::before {
+                display: none;
+            }
+        }
+    }
+}

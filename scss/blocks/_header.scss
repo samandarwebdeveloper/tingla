@@ -1,0 +1,25 @@
+.header {
+    width: 100%;
+    padding: 40px 0 0 115px;
+    &__wrapper {
+        img {
+            width: 130px;
+            transition: filter 0.3s ease;
+            will-change: filter;
+            &:hover {
+                filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+            }
+        }
+    }
+}
+
+@include breakpoint-down (480px) {
+    .header {
+        padding: 40px 0 0 0;
+        &__wrapper {
+            img {
+                width: 113px;
+            }
+        }
+    }
+}
